@@ -57,7 +57,8 @@ if __name__ == '__main__':
     """)
     f.close()
     
-# Generate AAR_config.py with secrets    
+# Generate AAR_config.py with secrets
+## This uses a template
     f = open('/var/www/AAR/AAR_config.py', 'w')
     appdbpw = binascii.b2a_base64(os.urandom(6)).strip('\n')
     secretkey = binascii.b2a_base64(os.urandom(12)).strip('\n')
